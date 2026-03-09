@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Mi Portal | IPS Salud Vital</title>
+  <link rel="stylesheet" href="css/estilos.css"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="icon" href="assets/favicon.png?v=2">
+</head>
+<body class="portal-dashboard">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Identidad del sistema">
+        <img class="brand-logo" src="assets/logo-icon.png" alt="Logo IPS Salud Vital"/>
+        <div>
+          <h1>Portal del Paciente</h1>
+          <div class="badge" id="patientSessionUser">Paciente</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="portal-paciente-dashboard.html" aria-current="page">Inicio</a>
+        <a href="#mis-citas">Mis citas</a>
+        <a href="#mis-notificaciones">Notificaciones</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn btn-ghost" id="btnPatientNotifications" type="button">
+          🔔 Notificaciones
+          <span id="patientNotificationCount" class="count-badge hidden">0</span>
+        </button>
+        <button class="btn btn-primary" id="btnPatientLogout" type="button">Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="container">
+    <section class="portal-hero">
+      <div class="portal-welcome card">
+        <div class="portal-welcome-content">
+          <span class="badge">Bienvenido</span>
+          <h2 id="patientWelcomeName">Hola, paciente</h2>
+          <p>
+            Desde este portal podrás revisar el estado de tus citas, ver notificaciones generadas por la IPS
+            y mantenerte informado sobre cambios o cancelaciones.
+          </p>
+        </div>
+      </div>
+
+      <div class="portal-mascot card">
+        <div class="portal-mascot-badge badge">Mascota oficial • Vitalín</div>
+      </div>
+    </section>
+
+    <section class="section-title" id="mis-citas">
+      <div>
+        <h2>Mis citas</h2>
+        <p>Consulta tus citas programadas y canceladas.</p>
+      </div>
+    </section>
+
+    <div class="card card-pad">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Servicio</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="patientAppointmentsTbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="section-title" id="mis-notificaciones">
+      <div>
+        <h2>Notificaciones</h2>
+        <p>Mensajes generados a partir de la programación o cancelación de tus citas.</p>
+      </div>
+    </section>
+
+    <div class="card card-pad">
+      <div id="patientNotificationsList">
+        <p>No hay notificaciones registradas para este paciente.</p>
+      </div>
+    </div>
+
+    <p class="footer">IPS Salud Vital • Portal del Paciente</p>
+  </main>
+
+  <div class="modal-backdrop" id="patientNotificationsBackdrop" role="dialog" aria-modal="true" aria-labelledby="patientNotificationsTitle">
+    <div class="modal">
+      <header>
+        <h3 id="patientNotificationsTitle" tabindex="-1">Mis notificaciones</h3>
+        <button class="btn btn-ghost" id="patientNotificationsClose" type="button">Cerrar</button>
+      </header>
+      <div class="modal-body">
+        <div id="patientNotificationsModalList">
+          <p>No hay notificaciones registradas para este paciente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
