@@ -1,0 +1,13 @@
+node_modules/
+dist/
+server/data/*.db
+server/data/*.db-shm
+server/data/*.db-wal
+.env
+.DS_Store
+.idea/
+.vscode/
+*.iml
+android/.gradle/
+android/build/
+android/app/build/
