@@ -139,7 +139,7 @@ api.interceptors.response.use(
         );
 
         window.location.href =
-          '/portal-paciente';
+  `${import.meta.env.BASE_URL}portal-paciente`;
       } else {
         /*
           Sesión interna inválida
@@ -154,7 +154,7 @@ api.interceptors.response.use(
         );
 
         window.location.href =
-          '/login';
+  `${import.meta.env.BASE_URL}login`;
       }
     }
 

@@ -3806,7 +3806,7 @@ function App() {
 createRoot(
   document.getElementById('root')
 ).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <BrowserRouter basename="/IPS-Salud-Vital-">
+  <App />
+</BrowserRouter>
 );
