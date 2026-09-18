@@ -1,9 +1,15 @@
 import axios from 'axios';
 
+const apiBaseURL = import.meta.env.VITE_API_URL;
+
+if (!apiBaseURL) {
+  throw new Error(
+    'VITE_API_URL no está configurada. Define la URL pública de la API.'
+  );
+}
+
 const api = axios.create({
-  baseURL:
-    import.meta.env.VITE_API_URL ||
-    'http://localhost:4000/api',
+  baseURL: apiBaseURL,
 });
 
 /* =========================================================
