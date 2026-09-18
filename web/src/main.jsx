@@ -298,7 +298,7 @@ function Layout({ children }) {
           </button>
 
           <img
-            src="/assets/logo-icon.png"
+            src={`${import.meta.env.BASE_URL}assets/logo-icon.png`}
             className="brand-logo"
             alt="IPS Salud Vital"
           />
@@ -626,7 +626,7 @@ function Login() {
       <div className="login-visual">
         <div className="visual-overlay">
           <img
-            src="/assets/logo-icon.png"
+            src={`${import.meta.env.BASE_URL}assets/logo-icon.png`}
             alt="IPS Salud Vital"
           />
 
@@ -665,7 +665,7 @@ function Login() {
       <div className="login-card">
         <div className="mobile-logo">
           <img
-            src="/assets/logo-icon.png"
+            src={`${import.meta.env.BASE_URL}assets/logo-icon.png`}
             alt="IPS Salud Vital"
           />
         </div>

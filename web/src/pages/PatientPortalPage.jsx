@@ -202,7 +202,7 @@ function PatientPortalPage() {
       <header className="topbar">
         <div className="brand-wrap">
           <img
-            src="/assets/logo-icon.png"
+            src={`${import.meta.env.BASE_URL}assets/logo-icon.png`}
             className="brand-logo"
             alt="IPS Salud Vital"
           />
