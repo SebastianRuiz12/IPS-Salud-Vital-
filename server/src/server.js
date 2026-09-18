@@ -3123,18 +3123,12 @@ app.use(
    SERVIDOR
 ========================================================= */
 
-const PORT =
-  Number(
-    process.env.PORT || 4000
-  );
+const PORT = Number(process.env.PORT) || 4000;
 
-app.listen(
-  PORT,
-  () => {
-    console.log(
-      `IPS Salud Vital API ejecutándose en http://localhost:${PORT}`
-    );
-  }
-);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(
+    `IPS Salud Vital API ejecutándose en http://0.0.0.0:${PORT}`
+  );
+});
 
 export default app;
